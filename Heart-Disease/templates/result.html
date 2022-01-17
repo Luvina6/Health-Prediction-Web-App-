@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Heart Disease Predictor</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+
+    <body>
+
+        <!-- Website Title -->
+		<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Heart Disease Predictor</span></h2>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='danger'>Oops! You have Chances of Heart Disease.</span></h1>
+				<h3>Sir You Must Have to Visit A Cardiologist as Soon as Possible</h3>
+				<div style="text-align: left;">
+				<h4>--------    Here are Some of the Major Cardiologists in Kerala     --------</h4>
+				<ol>
+					<li>Dr T K Jayakumar ( Superintend of Kottayam Medical College )</li>
+					<br/>
+					<li>Dr George Thayil MD, FACC, FRCP ( Lourdes hospital, Cochin )</li>
+					<br/>
+					<li>Dr M K Moosa Kunhi MBBS, MS, Mch, FIACS ( City Hospital Ernakulam )</li>
+					<br/>
+					<li>Dr Ashokan Nambiar C MBBS, MD, DM, FACC ( Baby Memorial Hospital Calicut)</li>
+					<br/>
+					<li>Dr Cibi Issac MBBS, MD, DNB, MNAMS, DM, FESC, FWSIM, FICC ( VPS Lakeshore Hospital, Kochi ) <a href="https://drcibiissac.com/">His Website</a></li>
+					<br/>
+					<li>Dr K R Santhosh MBBS, MD (Gen Med), DNB (Gen Med), DM (Cardio), FSCAI, FESC (PRS Hospital Trivandrum) <a href="http://drkrsanthosh.com/">His Website</a></li></li>
+					<br/>
+					<li>Dr Anil Kumar R (Aster Medicity, Ernakulam) <a href="https://www.asterhospitals.in/doctors/dranil-kumar-r">His Website</a></li>
+					<br/>
+					<li>DR A George Koshy MBBS, MD, DM, FACC, FSCAI, FRCP (Government Medical College, Trivandrum) <a href="http://drageorgekoshy.com/">His Website</a></li>
+					<br/>
+					<li>DR. C G Bahuleyan MBBS, MD, DM, FRCP, FSCAI (Ananthapuri Hospitals and Research Institute, Thiruvananthapuram) <a href="http://drcgbahuleyan.com/">His Website</a></li>
+					<br/>
+					<li>Dr Sajeev C G MBBS, MD, DNB, DM, PhD (Government Medical College, Calicut) <a href="http://drsajeevcg.com/">His Website</a></li>
+					<br/>
+				</ol>
+				</div>
+				
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='safe'>Great! You DON'T have chances of Heart Disease.</span></h1>
+				<div style="text-align: left;">
+					<h4>------------ Please Do the Prevention Methods for Heart disease  ------------------</h4>
+					<ul>
+						<li>No Smoking</li><br>
+						<li>Maintain Healthy Weight</li><br>
+						<li>Exercise Everyday</li><br>
+						<li>Follow Healthy Diet</li>
+						<ul>
+							<li>Fruits</li>
+							<li>Vegetables</li>
+							<li>Whole Grains</li>
+							<li>Nuts</li>
+							<li>Fish</li>
+							<li>Poultry</li>
+							<li>Extra Virgin Olive Oil</li>
+							<li>Eat Less Salty Foods</li>
+						</ul>
+					</ul>
+				</div>
+				
+				
+			{% endif %}
+		</div>
+
+		<!-- Footer -->
+       <div class='footer'>
+           
+       </div>
+
+	</body>
+</html>
